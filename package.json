@@ -1,0 +1,30 @@
+{
+  "name": "gravity",
+  "version": "1.0.0",
+  "description": "Calculate interesting properties of planetary bodies.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "author": "Mark Grealish <mark@bhalash.com> (https://www.bhalash.com)",
+  "license": "MIT",
+  "devDependencies": {
+    "tape": "^4.5.1"
+  },
+  "repository": {
+    "url": "git+ssh://git@github.com/bhalash/gravity.git",
+    "type": "git"
+  },
+  "homepage": "https://github.com/bhalash/gravity#readme",
+  "keywords": [
+    "space",
+    "planets",
+    "gravity",
+    "stellar",
+    "physics"
+  ],
+  "bugs": {
+    "url": "https://github.com/bhalash/gravity/issues"
+  },
+  "dependencies": {}
+}
