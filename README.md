@@ -3,10 +3,7 @@
 # ESG
 TODO
 
-[![Build Status](https://travis-ci.org/bhalash/wordscramble.svg?branch=master)](https://travis-ci.org/bhalash/wordscramble)
-[![Dependency Status](https://david-dm.org/bhalash/wordscramble.svg)](https://david-dm.org/bhalash/wordscramble)
-[![devDependency Status](https://david-dm.org/bhalash/wordscramble/dev-status.svg)](https://david-dm.org/bhalash/wordscramble#info=devDependencies)
-[![npm version](https://badge.fury.io/js/wordscramble.svg)](https://badge.fury.io/js/wordscramble)
+[![Build Status](https://travis-ci.org/bhalash/gravity.svg?branch=master)](https://travis-ci.org/bhalash/gravity)
 
 ## Installation
 
