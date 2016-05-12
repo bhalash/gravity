@@ -1,13 +1,27 @@
-// The gravitational constant: 6.741 * 10^-11
-const G = 6.741E-11;
-// Earth's equatorial surface gravity, expressed in m/s.
-const ESG_EARTH = 9.819679163952204;
-
 /**
  * Calculate the gravity of a planetary body, and other fun related things.
  */
 
-var ESG = function() {}
+var ESG = function(opts) {
+    console.log(opts);
+}
+
+// The gravitational constant: 6.741 * 10^-11
+ESG.prototype.G = 6.741e-11;
+// Earth's equatorial surface gravity: 9.82 m/s.
+ESG.prototype.ESG_EARTH = 0.982e+1;
+
+/**
+ * Round a number to a given decimal place.
+ *
+ * @param {number} value - Value to round.
+ * @param {number} [precision=0] - Rounding precision.
+ */
+
+ESG.prototype.precision = function(value, precision) {
+    precision = precision || 0;
+    return +value.toFixed(precision);
+}
 
 /**
  * Calculate the equatorial surface gravity of a spherical body.
@@ -18,7 +32,7 @@ var ESG = function() {}
  */
 
 ESG.prototype.gravity = function(mass, radius) {
-    return G * mass / Math.pow(radius, 2);
+    return this.G * mass / Math.pow(radius, 2);
 }
 
 /**
@@ -30,7 +44,7 @@ ESG.prototype.gravity = function(mass, radius) {
  */
 
 ESG.prototype.relative = function(mass, radius) {
-    return Math.ceil(ESG_EARTH / this.gravity(mass, radius));
+    return this.ESG_EARTH / this.gravity(mass, radius);
 }
 
 /**
@@ -42,7 +56,7 @@ ESG.prototype.relative = function(mass, radius) {
  */
 
 ESG.prototype.escape = function(mass, radius) {
-    return Math.sqrt(2 * G * mass / radius);
+    return Math.sqrt(2 * this.G * mass / radius);
 }
 
 /**
@@ -58,7 +72,8 @@ ESG.prototype.escape = function(mass, radius) {
  */
 
 ESG.prototype.orbit = function(mass, radius) {
-    return Math.sqrt(G * mass / radius);
+    return Math.sqrt(this.G * mass / radius);
 }
 
 module.exports = Object.create(ESG.prototype);
+// module.exports = new ESG();

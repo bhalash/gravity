@@ -7,11 +7,11 @@ TODO
 
 ## Installation
 
-    npm install gravity
+    npm install esg
 
 ## Usage
 
-    var esg = require('./');
+    var esg = require('esg');
 
     // Surface gravity in m/s.
     esg.gravity(5.972E+24, 6.371E+6) // 9.91810989409835

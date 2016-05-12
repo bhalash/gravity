@@ -1,6 +1,6 @@
 {
   "name": "esg",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Calculate interesting properties of planetary bodies.",
   "main": "index.js",
   "scripts": {
