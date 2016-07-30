@@ -1,10 +1,11 @@
 {
   "name": "esg",
-  "version": "1.0.1",
-  "description": "Calculate interesting properties of planetary bodies.",
-  "main": "index.js",
+  "version": "2.0.1",
+  "description": "Calculate the gravity of a spherical body.",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "node test"
+    "test": "node test/test",
+    "build": "tsc"
   },
   "author": "Mark Grealish <mark@bhalash.com> (https://www.bhalash.com)",
   "license": "MIT",
@@ -26,5 +27,7 @@
   "bugs": {
     "url": "https://github.com/bhalash/gravity/issues"
   },
-  "dependencies": {}
+  "dependencies": {
+    "typescript": "^1.8.10"
+  }
 }

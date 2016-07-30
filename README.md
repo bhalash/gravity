@@ -11,7 +11,7 @@ TODO
 
 ## Usage
 
-    var esg = require('esg');
+    var esg = new (require('esg')).ESG();
 
     // Surface gravity in m/s.
     esg.gravity(5.972E+24, 6.371E+6) // 9.91810989409835
