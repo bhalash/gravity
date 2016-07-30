@@ -1,4 +1,4 @@
-var esg = require('./'),
+var esg = new (require('../dist/')).ESG(),
     test = require('tape');
 
 var earth = {
