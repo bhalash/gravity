@@ -1,2 +1,12 @@
-node_modules/
-scratch.js
+/*
+/**/*.d.ts
+
+!/dist/
+!/src/
+!/test/
+
+LICENSE
+README.md
+banner.png
+package.json
+tsconfig.json
