@@ -1,19 +1,15 @@
-/**
- * Calculate the gravity of (most) spherical bodies.
- */
-
 export class ESG {
     // The gravitational constant: 6.741 * 10^-11
-    G: number = 6.741e-11;
+    private G:number = 6.741e-11;
     // Earth's equatorial surface gravity: 9.82 m/s.
-    ESG_EARTH: number = 0.982e+1;
+    private ESG_EARTH:number = 0.982e+1;
 
    /**
     * Round a number to a given decimal place.
     *
     * @param {number} value - Value to round.
     * @param {number} [precision=0] - Rounding precision.
-    * @return {number} Number
+    * @returns {number} Number
     */
 
     precision(value:number, precision:number = 0):number {
