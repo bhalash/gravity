@@ -1,8 +1,8 @@
-export class ESG {
+export namespace ESG {
     // The gravitational constant: 6.741 * 10^-11
-    private G:number = 6.741e-11;
+    const G:number = 6.741e-11;
     // Earth's equatorial surface gravity: 9.82 m/s.
-    private ESG_EARTH:number = 0.982e+1;
+    const ESG_EARTH:number = 0.982e+1;
 
    /**
     * Round a number to a given decimal place.
@@ -12,7 +12,7 @@ export class ESG {
     * @returns {number} Number
     */
 
-    precision(value:number, precision:number = 0):number {
+    export function precision(value:number, precision:number = 0):number {
         return +value.toFixed(precision);
     }
 
@@ -24,8 +24,8 @@ export class ESG {
      * @returns {number} - Surface gravity in meters/second.
      */
 
-    gravity(mass:number, radius:number):number {
-        return this.G * mass / Math.pow(radius, 2);
+    export function gravity(mass:number, radius:number):number {
+        return G * mass / Math.pow(radius, 2);
     }
 
     /**
@@ -36,8 +36,8 @@ export class ESG {
      * @returns {number} - Relative surface gravity as a ratio.
      */
 
-    relative(mass:number, radius:number):number {
-        return this.ESG_EARTH / this.gravity(mass, radius);
+    export function relative(mass:number, radius:number):number {
+        return ESG_EARTH / gravity(mass, radius);
     }
 
     /**
@@ -48,8 +48,8 @@ export class ESG {
      * @returns {number} - Escape velocity in meters/second.
      */
 
-    escape(mass:number, radius:number):number {
-        return Math.sqrt(2 * this.G * mass / radius);
+    export function escape(mass:number, radius:number):number {
+        return Math.sqrt(2 * G * mass / radius);
     }
 
     /**
@@ -64,7 +64,7 @@ export class ESG {
      * @returns {number} - Orbital velocity in meters/second.
      */
 
-    orbit(mass:number, radius:number):number {
-        return Math.sqrt(this.G * mass / radius);
+    export function orbit(mass:number, radius:number):number {
+        return Math.sqrt(G * mass / radius);
     }
 }

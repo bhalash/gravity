@@ -1,7 +1,7 @@
 ![](/banner.png)
 
 # ESG
-ESG-short for **E**quatorial **S**urface **G**ravity-is a small functional library which returns the [surface gravity][1] of a spherical body as derived from the Newton's [gravitational constant][3].
+ESG-short for **E**quatorial **S**urface **G**ravity-is a small functionally-programmed library which returns the [surface gravity][1] of a spherical body as derived from the Newton's [gravitational constant][3].
 
 [![Build Status](https://travis-ci.org/bhalash/gravity.svg?branch=master)](https://travis-ci.org/bhalash/gravity)
 
@@ -11,7 +11,7 @@ ESG-short for **E**quatorial **S**urface **G**ravity-is a small functional libra
 
 ## Usage
 
-    var esg = new (require('esg')).ESG();
+    var esg = require('esg').ESG;
 
     // Surface gravity in m/s.
     esg.gravity(5.972E+24, 6.371E+6) // 9.91810989409835
